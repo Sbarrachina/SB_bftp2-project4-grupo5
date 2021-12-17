@@ -1,4 +1,4 @@
-package repositories;
+package org.factoriaf5.bftp2project4grupo5.repositories;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -9,10 +9,10 @@ import java.util.List;
 @Component
 public class SampleDataLoader {
 
-    private LegacyGameRepository legacyGameRepository;
+    private org.factoriaf5.bftp2project4grupo5.repositories.LegacyGameRepository legacyGameRepository;
 
     @Autowired
-    public SampleDataLoader(LegacyGameRepository legacyGameRepository) {
+    public SampleDataLoader(org.factoriaf5.bftp2project4grupo5.repositories.LegacyGameRepository legacyGameRepository) {
         this.legacyGameRepository = legacyGameRepository;
     }
 

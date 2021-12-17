@@ -1,13 +1,15 @@
 package org.factoriaf5.bftp2project4grupo5;
 
+import org.factoriaf5.bftp2project4grupo5.repositories.Game;
+import org.factoriaf5.bftp2project4grupo5.repositories.LegacyGameRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.web.servlet.MockMvc;
-import repositories.Game;
-import repositories.LegacyGameRepository;
 
+
+import static org.hamcrest.Matchers.hasItem;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
@@ -24,19 +26,18 @@ public class ApplicationTests {
                 .andExpect(view().name("home"));
     }
 
-    @Test
+
     @Autowired
-    LegacyGameRepository legacygameRepository;
+    LegacyGameRepository legacyGameRepository;
 
     @Test
     void returnsTheExistingGames() throws Exception {
-
-        Game game = LegacyGameRepository.save(new Game("Harry Potter and the Philosopher's Stone", "J.K. Rowling", "fantasy"));
+        Game game = legacyGameRepository.save(new Game("Harry Potter and the Philosopher's Stone", "J.K. Rowling", "fantasy"));
 
         mockMvc.perform(get("/games"))
                 .andExpect(status().isOk())
                 .andExpect(view().name("games/all"))
-                .andExpect(model().attribute( name: "games", hasItem(game)));
+                .andExpect(model().attribute(  "games", hasItem(game)));
     }
 
 
