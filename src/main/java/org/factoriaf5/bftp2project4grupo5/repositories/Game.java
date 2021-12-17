@@ -13,23 +13,41 @@ import java.util.Objects;
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Long id;
         private String title;
-        private String author;
+        private String platform;
+        private Integer year;
         private String category;
+        private Integer pegi;
+        private String pcdescriptors;
 
         public Game() {
 
         }
 
-        public Game(String title, String author, String category) {
+        public Game(String title, String platform, String category, String pcdescriptors,Integer pegi,Integer year, long id) {
+            this.id = id;
             this.title = title;
-            this.author = author;
+            this.platform = platform;
+            this.year = year;
             this.category = category;
+            this.pegi = pegi;
+            this.pcdescriptors = pcdescriptors;
+
+
+
         }
 
         public Long getId() {
             return id;
         }
 
+        public Integer getPegi() {
+            return pegi;
+        }
+
+        public Integer getYear() {
+            return year;
+
+        }
         public void setId(Long id) {
             this.id = id;
         }
