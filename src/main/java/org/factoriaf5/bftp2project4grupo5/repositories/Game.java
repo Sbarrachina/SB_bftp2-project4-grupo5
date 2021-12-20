@@ -23,7 +23,7 @@ import java.util.Objects;
 
         }
 
-        public Game(String title, String platform, String category, String pcdescriptors,Integer pegi,Integer year, long id) {
+        public Game(String title, String platform, String category, String pcdescriptors, Integer pegi, Integer year, long id) {
             this.id = id;
             this.title = title;
             this.platform = platform;
@@ -31,25 +31,30 @@ import java.util.Objects;
             this.category = category;
             this.pegi = pegi;
             this.pcdescriptors = pcdescriptors;
-
-
-
         }
 
         public Long getId() {
             return id;
         }
 
+        public void setId(Long id) {
+            this.id = id;
+        }
+
         public Integer getPegi() {
             return pegi;
         }
 
+        public void setPegi(Integer pegi) {
+            this.pegi = pegi;
+        }
+
         public Integer getYear() {
             return year;
-
         }
-        public void setId(Long id) {
-            this.id = id;
+
+        public void setYear(Integer year) {
+            this.year = year;
         }
 
         public String getTitle() {
@@ -60,16 +65,51 @@ import java.util.Objects;
             this.title = title;
         }
 
+        public String getPlatform() {
+            return platform;
+
+        }
+
+        public void setPlatform(String platform) {
+            this.platform = platform;
+        }
+
+
+        public String getCategory() {
+            return category;
+        }
+
+        public void setCategory(String category) {
+            this.category = category;
+
+        }
+
+
+        public String getPcdescriptors() {
+            return pcdescriptors;
+        }
+
+        public void setPcdescriptors(String pcdescriptors) {
+            this.pcdescriptors = pcdescriptors;
+
+        }
+
+
+
         @Override
         public String toString() {
             return "Game{" +
                     "id=" + id +
                     ", title='" + title + '\'' +
-                    ", author='" + author + '\'' +
+                    ", platform='" + platform + '\'' +
                     ", category='" + category + '\'' +
+                    ", year='" + year + '\'' + ", " +
+                    ", pegi='" + pegi + '\'' +
+                    ", pcdescriptors='" + pcdescriptors + '\'' +
                     '}';
         }
 
+        /*pendiente reconfirmar uso y user stories
         public String getAuthor() {
             return author;
         }
@@ -78,19 +118,12 @@ import java.util.Objects;
             this.author = author;
         }
 
-        public String getCategory() {
-            return category;
-        }
 
-        public void setCategory(String category) {
-            this.category = category;
-        }
-
-        @Override
+       @Override
         public boolean equals(Object o) {
             if (this == o) return true;
             if (o == null || getClass() != o.getClass()) return false;
-            Game book = (Game) o;
+            Book book = (Book) o;
             return Objects.equals(id, book.id) && Objects.equals(title, book.title) && Objects.equals(author, book.author) && Objects.equals(category, book.category);
         }
 
@@ -99,5 +132,5 @@ import java.util.Objects;
             return Objects.hash(id, title, author, category);
         }
     }
-
+    */
 
