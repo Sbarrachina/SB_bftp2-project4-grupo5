@@ -1,10 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head"></head>
 
+<body>
+<header th:replace="fragments/header"></header>
+
+<section class="container">
+    <h1 th:text="${title}"></h1>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Platform</th>
+            <th>Year</th>
+            <th>Category</th>
+            <th>Pegi</th>
+            <th>Pcdescriptors</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="game: ${games}">
+            <th scope="row" th:text="${game.id}"></th>
+            <td th:text="${game.title}"></td>
+            <td th:text="${game.platform}"></td>
+            <td th:text="${game.year}"></td>
+            <td th:text="${game.category}"></td>
+            <td th:text="${game.pegi}"></td>
+            <td th:text="${game.pcdescriptors}"></td>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+
+            <td>
+                <a class="btn btn-success btn-sm" th:href="'/games/edit/'+${game.id}">Edit</a>
+            </td>
+            <td>
+                <a class="btn btn-danger" th:href="'/games/Delete/'+${game.id}">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+</section>
+
+<footer th:replace="fragments/footer"></footer>
 </body>
 </html>

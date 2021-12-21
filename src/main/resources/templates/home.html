@@ -1,12 +1,16 @@
 
+<!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>User Management</title>
-</head>
+<head th:replace="fragments/head"></head>
+
 <body>
 <header th:replace="fragments/header"></header>
-<section class="container"><h2>Welcome to my page</h2></section>
+
+<section class="container">
+    <h2>Bienvenido a mi catálogo </h2>
+    <p>Go to the <a href="/books/">Games</a> section or <a href="/books/new">create a new game</a></p>
+</section>
+
 <footer th:replace="fragments/footer"></footer>
 </body>
 </html>

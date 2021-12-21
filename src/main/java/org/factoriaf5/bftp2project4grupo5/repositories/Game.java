@@ -114,8 +114,8 @@ import java.util.Objects;
             if (this == o) return true;
             if (o == null || getClass() != o.getClass()) return false;
             Game game = (Game) o;
-            return Objects.equals(id, game.id) && Objects.equals(title, game.title) && Objects.equals(platform, game.platform),&& Objects.equals(year, game.year) && Objects.equals(category, game.category);
-            && Objects.equals(pegi, game.pegi);&& Objects.equals(pcdescriptors, game.pcdescriptors);
+            return Objects.equals(id, game.id) && Objects.equals(title, game.title) && Objects.equals(platform, game.platform) && Objects.equals(year, game.year) && Objects.equals(category, game.category)
+            && Objects.equals(pegi, game.pegi) && Objects.equals(pcdescriptors, game.pcdescriptors);
 
         }
 
