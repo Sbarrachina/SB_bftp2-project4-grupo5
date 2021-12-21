@@ -113,6 +113,8 @@ import java.util.Objects;
 
 
 
+<<<<<<< HEAD
+=======
        @Override
         public boolean equals(Object o) {
             if (this == o) return true;
@@ -128,5 +130,6 @@ import java.util.Objects;
             return Objects.hash(id, title,platform,year,category,pegi,pcdescriptors);
         }
     }
+
 
 
