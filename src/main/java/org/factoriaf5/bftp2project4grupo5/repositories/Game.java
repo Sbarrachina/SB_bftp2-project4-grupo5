@@ -86,18 +86,3 @@ import java.util.Objects;
             this.category = category;
         }
 
-        @Override
-        public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
-            Game book = (Game) o;
-            return Objects.equals(id, book.id) && Objects.equals(title, book.title) && Objects.equals(author, book.author) && Objects.equals(category, book.category);
-        }
-
-        @Override
-        public int hashCode() {
-            return Objects.hash(id, title, author, category);
-        }
-    }
-
-
