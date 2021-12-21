@@ -109,12 +109,6 @@ import java.util.Objects;
                     '}';
         }
 
-
-
-
-
-<<<<<<< HEAD
-=======
        @Override
         public boolean equals(Object o) {
             if (this == o) return true;
