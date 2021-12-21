@@ -23,8 +23,7 @@ import java.util.Objects;
 
         }
 
-        public Game(String title, String platform, String category, String pcdescriptors, Integer pegi, Integer year, long id) {
-            this.id = id;
+        public Game(String title, String platform,Integer year, String category,Integer pegi, String pcdescriptors) {
             this.title = title;
             this.platform = platform;
             this.year = year;
@@ -41,26 +40,9 @@ import java.util.Objects;
             this.id = id;
         }
 
-        public Integer getPegi() {
-            return pegi;
-        }
-
-        public void setPegi(Integer pegi) {
-            this.pegi = pegi;
-        }
-
-        public Integer getYear() {
-            return year;
-        }
-
-        public void setYear(Integer year) {
-            this.year = year;
-        }
-
         public String getTitle() {
             return title;
         }
-
         public void setTitle(String title) {
             this.title = title;
         }
@@ -74,6 +56,13 @@ import java.util.Objects;
             this.platform = platform;
         }
 
+        public Integer getYear() {
+            return year;
+        }
+
+        public void setYear(Integer year) {
+            this.year = year;
+        }
 
         public String getCategory() {
             return category;
@@ -82,6 +71,15 @@ import java.util.Objects;
         public void setCategory(String category) {
             this.category = category;
 
+        }
+
+
+        public Integer getPegi() {
+            return pegi;
+        }
+
+        public void setPegi(Integer pegi) {
+            this.pegi = pegi;
         }
 
 
@@ -102,35 +100,33 @@ import java.util.Objects;
                     "id=" + id +
                     ", title='" + title + '\'' +
                     ", platform='" + platform + '\'' +
-                    ", category='" + category + '\'' +
                     ", year='" + year + '\'' + ", " +
+
+                    ", category='" + category + '\'' +
+
                     ", pegi='" + pegi + '\'' +
                     ", pcdescriptors='" + pcdescriptors + '\'' +
                     '}';
         }
 
-        /*pendiente reconfirmar uso y user stories
-        public String getAuthor() {
-            return author;
-        }
 
-        public void setAuthor(String author) {
-            this.author = author;
-        }
+
 
 
        @Override
         public boolean equals(Object o) {
             if (this == o) return true;
             if (o == null || getClass() != o.getClass()) return false;
-            Book book = (Book) o;
-            return Objects.equals(id, book.id) && Objects.equals(title, book.title) && Objects.equals(author, book.author) && Objects.equals(category, book.category);
+            Game game = (Game) o;
+            return Objects.equals(id, game.id) && Objects.equals(title, game.title) && Objects.equals(platform, game.platform),&& Objects.equals(year, game.year) && Objects.equals(category, game.category);
+            && Objects.equals(pegi, game.pegi);&& Objects.equals(pcdescriptors, game.pcdescriptors);
+
         }
 
         @Override
         public int hashCode() {
-            return Objects.hash(id, title, author, category);
+            return Objects.hash(id, title,platform,year,category,pegi,pcdescriptors);
         }
     }
-    */
+
 
