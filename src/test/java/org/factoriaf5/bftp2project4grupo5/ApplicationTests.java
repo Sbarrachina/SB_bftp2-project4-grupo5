@@ -32,17 +32,7 @@ public class ApplicationTests {
 
     @Test
     void returnsTheExistingGames() throws Exception {
-        Game game = legacyGameRepository.save(new Game("Harry Potter and the Philosopher's Stone", "J.K. Rowling", "fantasy"));
-
-        mockMvc.perform(get("/games"))
-                .andExpect(status().isOk())
-                .andExpect(view().name("games/all"))
-                .andExpect(model().attribute(  "games", hasItem(game)));
-    }
-
-    @Test
-    void returnsTheExistingGames() throws Exception {
-        Game game = legacyGameRepository.save(new Game("Super Mario Bros", "J.K. Rowling", "fantasy"));
+        Game game = legacyGameRepository.save(new Game("Duck Hunt", "Nes", 1984,"Shooter",12, "Non-realistic violence"));
 
         mockMvc.perform(get("/games"))
                 .andExpect(status().isOk())

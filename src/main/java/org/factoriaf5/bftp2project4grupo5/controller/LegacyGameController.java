@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
 
 import java.util.List;
@@ -28,6 +30,20 @@ public class LegacyGameController {
         model.addAttribute("title", "Game list");
         model.addAttribute("games", games);
         return "games/all";
+    }
+
+    @GetMapping("/games/new")
+    String newBook(Model model) {
+        Game game = new Game();
+        model.addAttribute("game", game);
+        model.addAttribute("title", "Create new game");
+        return "games/edit";
+    }
+
+    @PostMapping("/games/new")
+    String addBook(@ModelAttribute Game game) {
+        legacyGameRepository.save(game);
+        return "redirect:/games";
     }
 }
 

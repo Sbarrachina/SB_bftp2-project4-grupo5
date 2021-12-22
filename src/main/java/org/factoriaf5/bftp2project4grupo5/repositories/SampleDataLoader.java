@@ -20,7 +20,7 @@ public class SampleDataLoader {
     public void loadSampleData() {
         legacyGameRepository.saveAll(List.of(
 
-                new Game("Duck Hunt", "Ness", 1984, "Shooter", 12, "Non-realistic violence"),
+                new Game("Duck Hunt", "Nes", 1984, "Shooter", 12, "Non-realistic violence"),
                 new Game("Nintendogs", "DS", 2005, "Simulation", 3, "suitable for kids"),
                 new Game("Halo 3", "X360", 2007, "Shooter", 12 , "Non-realistic violence")
         ));
