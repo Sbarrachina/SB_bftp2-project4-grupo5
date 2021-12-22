@@ -22,7 +22,10 @@ public class SampleDataLoader {
 
                 new Game("Duck Hunt", "Nes", 1984, "Shooter", 12, "Non-realistic violence"),
                 new Game("Nintendogs", "DS", 2005, "Simulation", 3, "suitable for kids"),
-                new Game("Halo 3", "X360", 2007, "Shooter", 12 , "Non-realistic violence")
+                new Game("Halo 3", "X360", 2007, "Shooter", 12 , "Non-realistic violence"),
+                new Game( "Super Mario Galaxy", "Wii",2007, "Platform",7,""),
+
+                new Game("Grand Theft Auto IV","X360",2008,"Action",12,"Non realistic violence")
         ));
     }
 }
