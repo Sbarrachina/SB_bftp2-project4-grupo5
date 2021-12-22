@@ -23,6 +23,7 @@ public class SampleDataLoader {
                 new Game("Duck Hunt", "Nes", 1984, "Shooter", 12, "Non-realistic violence"),
                 new Game("Nintendogs", "DS", 2005, "Simulation", 3, "suitable for kids"),
                 new Game("Halo 3", "X360", 2007, "Shooter", 12 , "Non-realistic violence"),
+<<<<<<< HEAD
                 new Game("Wii Fit", "Wii", 2007, "Sports", 3, "Suitable for kids"),
                 new Game("Wii Fit Plus", "Wii", 2009, "Sports", 3, "Suitable for kids"),
                 new Game( "Animal Crossing:Wild World", "DS", 2005, "Simulation", 3, "Suitable for kids"),
@@ -33,6 +34,11 @@ public class SampleDataLoader {
                 new Game("Pokemon Rubby Pokemon Sapphire", "GBA", 2002, "Roye-Playing", 12, "Non-realistic violence"),
                 new Game("Pokemon Black Pokemon White", "DS", 2010, "Role-Playing", 12, "Non-realistic violence"),
                 new Game("Brain Age 2 More training in minutes a day","DS", 2005, "Puzzle", 3, "Suitable for kids")
+=======
+                new Game("Pacman", "2600", 1982, "Puzzle", 3 , "Suitable for kids"),
+                new Game("Tetris", "GB", 1989, "Puzzle", 7 ,"" ),
+                new Game("Minecraft", "X360", 2013, "Misc", 7 ,"" )
+>>>>>>> 49b9daae5b94dbff43c8da61f89d450ee70e156f
         ));
     }
 }
