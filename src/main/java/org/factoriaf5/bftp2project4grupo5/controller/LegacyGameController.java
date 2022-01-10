@@ -55,7 +55,7 @@ public class LegacyGameController {
     @GetMapping("/games/{id}/delete")
     String deleteGame(@PathVariable Long id){
         legacyGameRepository.deleteById(id);
-        return "redirect:/";
+        return "redirect:/games";
     }
 }
 

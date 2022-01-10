@@ -30,10 +30,10 @@
             <td th:text="${game.pcdescriptors}"></td>
 
             <td>
-                <a class="btn btn-success btn-sm" th:href="'/games/edit/'+${game.id}">Edit</a>
+                <a class="btn btn-success btn-sm" th:href="'/games/'+${game.id}+'/edit'">Edit</a>
             </td>
             <td>
-                <a class="btn btn-danger" th:href="'/games/Delete/'+${game.id}">Delete</a>
+                <a class="btn btn-danger" th:href="'/games/'+${game.id}+'/delete'">Delete</a>
             </td>
         </tr>
         </tbody>
