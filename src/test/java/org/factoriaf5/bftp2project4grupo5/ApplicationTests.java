@@ -73,16 +73,16 @@ public class ApplicationTests {
         assertThat(existingGames, contains(allOf(
                 hasProperty("title", equalTo("Duck Hunt")),
                 hasProperty("platform", equalTo("Nes")),
-                hasProperty("year", equalTo("1984")),
+                hasProperty("year", equalTo(1984)),
                 hasProperty("category", equalTo("Shooter")),
-                hasProperty("pegi", equalTo("12")),
+                hasProperty("pegi", equalTo(12)),
                 hasProperty("pcdescriptors", equalTo("Non-realistic violence"))
         )));
     }
     @Test
     void returnsAFormToEditGames() throws Exception {
         Game game = legacyGameRepository.save(new Game("Duck Hunt", "Nes", 1984, "Shooter", 12, "Non-realistic violence"));
-        mockMvc.perform(get("/games/edit/" + game.getId()))
+        mockMvc.perform(get("/games/" + game.getId()+"/edit"))
                 .andExpect(status().isOk())
                 .andExpect(view().name("games/edit"))
                 .andExpect(model().attribute("game", game))
@@ -93,7 +93,7 @@ public class ApplicationTests {
     @Test
     void allowsToDeleteAGame() throws Exception {
         Game game = legacyGameRepository.save(new Game("Duck Hunt", "Nes", 1984, "Shooter", 12, "Non-realistic violence"));
-        mockMvc.perform(get("/delete/" + game.getId()))
+        mockMvc.perform(get("/games/" + game.getId()+"/delete"))
                 .andExpect(status().is3xxRedirection())
                 .andExpect(redirectedUrl("/"));
     }
