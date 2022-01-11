@@ -16,19 +16,22 @@ import java.util.Objects;
         private Integer year;
         private String category;
         private Integer pegi;
-        private String pcdescriptors;
+        private Integer price;
+        private String image;
 
         public Game() {
 
         }
 
-        public Game(String title, String platform,Integer year, String category,Integer pegi, String pcdescriptors) {
+        public Game(String title, String platform,Integer year, String category,Integer pegi, Integer price, String image ) {
             this.title = title;
             this.platform = platform;
             this.year = year;
             this.category = category;
             this.pegi = pegi;
-            this.pcdescriptors = pcdescriptors;
+            this.price = price;
+            this.image = image;
+
         }
 
         public Long getId() {
@@ -82,14 +85,21 @@ import java.util.Objects;
         }
 
 
-        public String getPcdescriptors() {
-            return pcdescriptors;
+        public Integer getPrice() {
+            return price;
         }
 
-        public void setPcdescriptors(String pcdescriptors) {
-            this.pcdescriptors = pcdescriptors;
+        public void setPrice(Integer price) {this.price = price; }
 
-        }
+        public String getImage() { return image;}
+
+        public void setImage(String image) { this.image = image; }
+
+
+
+
+
+
 
 
 
@@ -104,7 +114,8 @@ import java.util.Objects;
                     ", category='" + category + '\'' +
 
                     ", pegi='" + pegi + '\'' +
-                    ", pcdescriptors='" + pcdescriptors + '\'' +
+                    ", price='" + price + '\'' +
+                    ", image='" + image + '\'' +
                     '}';
         }
 
@@ -114,13 +125,13 @@ import java.util.Objects;
             if (o == null || getClass() != o.getClass()) return false;
             Game game = (Game) o;
             return Objects.equals(id, game.id) && Objects.equals(title, game.title) && Objects.equals(platform, game.platform) && Objects.equals(year, game.year) && Objects.equals(category, game.category)
-            && Objects.equals(pegi, game.pegi) && Objects.equals(pcdescriptors, game.pcdescriptors);
+            && Objects.equals(pegi, game.pegi) && Objects.equals(price, game.price) && Objects.equals(image, game.image);
 
         }
 
         @Override
         public int hashCode() {
-            return Objects.hash(id, title,platform,year,category,pegi,pcdescriptors);
+            return Objects.hash(id, title,platform,year,category,pegi,price,image);
         }
     }
 

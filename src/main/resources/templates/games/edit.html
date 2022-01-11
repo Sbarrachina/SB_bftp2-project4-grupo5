@@ -35,12 +35,16 @@
                    placeholder="Enter pegi">
         </div>
         <div class="form-group">
-            <label class="col-md2" for="pcdescriptors">Pcdescriptors</label>
-            <input th:field="*{pcdescriptors}" type="text" class="col-md6 form-control form-control-sm" id="pcdescriptors"
-                   placeholder="Enter pcdescriptors">
+            <label class="col-md2" for="price">Price</label>
+            <input th:field="*{price}" type="text" class="col-md6 form-control form-control-sm" id="price"
+                   placeholder="Enter price">
         </div>
 
-
+        <div class="form-group">
+            <label class="col-md2" for="image">Image</label>
+            <input th:field="*{image}" type="url" class="col-md6 form-control form-control-sm" id="image"
+                   placeholder="Enter Add an image url">
+        </div>
 
         <div class="card-footer ">
             <input type="submit" class="btn btn-primary btn-sm" value="Save"/>

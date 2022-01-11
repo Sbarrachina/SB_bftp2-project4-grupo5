@@ -16,7 +16,8 @@
             <th>Year</th>
             <th>Category</th>
             <th>Pegi</th>
-            <th>Pcdescriptors</th>
+            <th>Price</th>
+            <th>Image</th>
         </tr>
         </thead>
         <tbody>
@@ -27,7 +28,8 @@
             <td th:text="${game.year}"></td>
             <td th:text="${game.category}"></td>
             <td th:text="${game.pegi}"></td>
-            <td th:text="${game.pcdescriptors}"></td>
+            <td th:text="${game.price}"></td>
+            <td th:text="${game.image}"></td>
 
             <td>
                 <a class="btn btn-success btn-sm" th:href="'/games/'+${game.id}+'/edit'">Edit</a>

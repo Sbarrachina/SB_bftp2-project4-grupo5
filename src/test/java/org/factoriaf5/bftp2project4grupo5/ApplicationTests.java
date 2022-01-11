@@ -34,7 +34,7 @@ public class ApplicationTests {
 
     @Test
     void returnsTheExistingGames() throws Exception {
-        Game game = legacyGameRepository.save(new Game("Duck Hunt", "Nes", 1984,"Shooter",12, "Non-realistic violence"));
+        Game game = legacyGameRepository.save(new Game("Duck Hunt", "Nes", 1984,"Shooter",12, 100, "image.png"  ));
 
         mockMvc.perform(get("/games"))
                 .andExpect(status().isOk())
@@ -63,7 +63,8 @@ public class ApplicationTests {
                         .param("year", "1984")
                         .param("category", "Shooter")
                         .param("pegi", "12")
-                        .param("pcdescriptors", "Non-realistic violence")
+                        .param("price", "100")
+                        .param( "image", "image.png"  )
                 )
                 .andExpect(status().is3xxRedirection())
                 .andExpect(redirectedUrl("/games"))
@@ -76,12 +77,14 @@ public class ApplicationTests {
                 hasProperty("year", equalTo(1984)),
                 hasProperty("category", equalTo("Shooter")),
                 hasProperty("pegi", equalTo(12)),
-                hasProperty("pcdescriptors", equalTo("Non-realistic violence"))
+                hasProperty("price", equalTo("100")),
+                hasProperty("image", equalTo( "image.png"))
         )));
     }
+
     @Test
     void returnsAFormToEditGames() throws Exception {
-        Game game = legacyGameRepository.save(new Game("Duck Hunt", "Nes", 1984, "Shooter", 12, "Non-realistic violence"));
+        Game game = legacyGameRepository.save(new Game("Duck Hunt", "Nes", 1984, "Shooter", 12, 100, "image.png"));
         mockMvc.perform(get("/games/" + game.getId()+"/edit"))
                 .andExpect(status().isOk())
                 .andExpect(view().name("games/edit"))
@@ -92,17 +95,10 @@ public class ApplicationTests {
 
     @Test
     void allowsToDeleteAGame() throws Exception {
-        Game game = legacyGameRepository.save(new Game("Duck Hunt", "Nes", 1984, "Shooter", 12, "Non-realistic violence"));
+        Game game = legacyGameRepository.save(new Game("Duck Hunt", "Nes", 1984, "Shooter", 12, 100, "image.png"));
         mockMvc.perform(get("/games/" + game.getId()+"/delete"))
                 .andExpect(status().is3xxRedirection())
                 .andExpect(redirectedUrl("/"));
     }
 }
-//@Test
-//    void allowsToDeleteABook() throws Exception {
-//        Book book = bookRepository.save(new Book("Super Mario Bros", "Nes", "Sports"));
-//        mockMvc.perform(get("/delete/" + book.getId()))
-//                .andExpect(status().is3xxRedirection())
-//                .andExpect(redirectedUrl("/"));
-//    }
-//new Game("Duck Hunt", "Nes", 1984, "Shooter", 12, "Non-realistic violence"),
+
