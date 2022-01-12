@@ -114,13 +114,13 @@ footer{
 
 /*modo tarjeta*/
 
-.book-list {
+.game-list {
     padding: 5px;
     display: flex;
     flex-wrap: wrap;
 }
 
-.book {
+.game {
     width: 400px;
     margin: 10px;
     border: 1px solid black;
@@ -128,35 +128,35 @@ footer{
     transition-duration: 0.2s;
 }
 
-.book:hover {
+.game:hover {
     transform: translate(2px, 2px);
     box-shadow: 5px 2px 2px #fcf3cf;
 }
 
-.book .img-container {
+.game .img-container {
     width: 80%;
     height: 145px;
     margin: auto;
 }
 
-.book .img-container img {
+.game .img-container img {
     max-width: 100%;
     max-height: 100%;
     display: block;
     margin: auto;
 }
 
-.book .info {
+.game .info {
     margin: 10px 20px;
     font-size: small;
 }
 
-.book .buttons {
+.game .buttons {
     margin-top: 50px;
     padding: 10px;
 }
 
-.book-filters {
+.game-filters {
     list-style: none;
     font-size: 20px;
     margin: 5px;
@@ -164,7 +164,7 @@ footer{
     float: left;
 }
 
-.book-filters li  img   {
+.game-filters li  img   {
     margin: 0 10px;
     padding:10px;
 
@@ -186,18 +186,7 @@ footer{
     width: 5%;
 
 }
-.book-filters2{
-    list-style: none;
 
-}
-.book-filters3{
-    list-style: none;
-
-}
-.book-filters4{
-    list-style: none;
-
-}
 
 
 
