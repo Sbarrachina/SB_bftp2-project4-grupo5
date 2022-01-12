@@ -16,14 +16,14 @@ import java.util.Objects;
         private Integer year;
         private String category;
         private Integer pegi;
-        private Integer price;
+        private String price;
         private String image;
 
         public Game() {
 
         }
 
-        public Game(String title, String platform,Integer year, String category,Integer pegi, Integer price, String image ) {
+        public Game(String title, String platform,Integer year, String category,Integer pegi, String price, String image ) {
             this.title = title;
             this.platform = platform;
             this.year = year;
@@ -85,11 +85,11 @@ import java.util.Objects;
         }
 
 
-        public Integer getPrice() {
+        public String getPrice() {
             return price;
         }
 
-        public void setPrice(Integer price) {this.price = price; }
+        public void setPrice(String price) {this.price = price; }
 
         public String getImage() { return image;}
 
