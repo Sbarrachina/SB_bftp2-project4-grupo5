@@ -7,10 +7,24 @@
 <header th:replace="fragments/header"></header>
 
 <section class="container">
-    <h2>Bienvenido a mi catálogo </h2>
-    <p>Go to the <a href="http://localhost:8080/games">Games</a> section or <a href="/games/new">create a new game</a></p>
-</section>
 
+    <div class="slider">
+
+        <ul>
+            <li> <img class="slider1" th:src="@{/assets/sliders1.png}" alt="slider1"></li>
+            <li> <img class="slider2" th:src="@{/assets/sliders2.png}" alt="slider2"></li>
+            <li> <img class="slider3" th:src="@{/assets/sliders3.png}" alt="slider3"></li>
+            <li> <img class="slider4" th:src="@{/assets/sliders4.png}" alt="slider4"></li>
+
+        </ul>
+    </div>
+
+
+
+
+
+
+</section>
 <footer th:replace="fragments/footer"></footer>
 </body>
 </html>
