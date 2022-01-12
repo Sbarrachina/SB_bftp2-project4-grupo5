@@ -13,17 +13,17 @@ import java.util.Objects;
         private Long id;
         private String title;
         private String platform;
-        private Integer year;
+        private int year;
         private String category;
-        private Integer pegi;
-        private String price;
+        private int pegi;
+        private double price;
         private String image;
 
         public Game() {
 
         }
 
-        public Game(String title, String platform,Integer year, String category,Integer pegi, String price, String image ) {
+        public Game(String title, String platform,int year, String category,int pegi, double price, String image ) {
             this.title = title;
             this.platform = platform;
             this.year = year;
@@ -58,13 +58,9 @@ import java.util.Objects;
             this.platform = platform;
         }
 
-        public Integer getYear() {
-            return year;
-        }
 
-        public void setYear(Integer year) {
-            this.year = year;
-        }
+
+
 
         public String getCategory() {
             return category;
@@ -75,33 +71,42 @@ import java.util.Objects;
 
         }
 
-
-        public Integer getPegi() {
-            return pegi;
+        public int getYear() {
+            return year;
         }
 
-        public void setPegi(Integer pegi) {
-            this.pegi = pegi;
+        public void setYear(int year) {
+            this.year = year;
         }
-
-
-        public String getPrice() {
-            return price;
-        }
-
-        public void setPrice(String price) {this.price = price; }
 
         public String getImage() { return image;}
 
         public void setImage(String image) { this.image = image; }
 
+        public double getPrice() {
+            return price;
+        }
+
+        public int getPegi() {
+            return pegi;
+        }
+
+        public void setPegi(int pegi) {
+            this.pegi = pegi;
+        }
+
+        public void setPrice(double price) {
+            this.price = price;
+        }
 
 
-
-
-
-
-
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            Game game = (Game) o;
+            return year == game.year && pegi == game.pegi && Double.compare(game.price, price) == 0 && Objects.equals(id, game.id) && Objects.equals(title, game.title) && Objects.equals(platform, game.platform) && Objects.equals(category, game.category) && Objects.equals(image, game.image);
+        }
 
         @Override
         public String toString() {
@@ -109,29 +114,17 @@ import java.util.Objects;
                     "id=" + id +
                     ", title='" + title + '\'' +
                     ", platform='" + platform + '\'' +
-                    ", year='" + year + '\'' + ", " +
-
+                    ", year=" + year +
                     ", category='" + category + '\'' +
-
-                    ", pegi='" + pegi + '\'' +
-                    ", price='" + price + '\'' +
+                    ", pegi=" + pegi +
+                    ", price=" + price +
                     ", image='" + image + '\'' +
                     '}';
         }
 
-       @Override
-        public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
-            Game game = (Game) o;
-            return Objects.equals(id, game.id) && Objects.equals(title, game.title) && Objects.equals(platform, game.platform) && Objects.equals(year, game.year) && Objects.equals(category, game.category)
-            && Objects.equals(pegi, game.pegi) && Objects.equals(price, game.price) && Objects.equals(image, game.image);
-
-        }
-
         @Override
         public int hashCode() {
-            return Objects.hash(id, title,platform,year,category,pegi,price,image);
+            return Objects.hash(id, title, platform, year, category, pegi, price, image);
         }
     }
 
