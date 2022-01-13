@@ -1,7 +1,7 @@
 
 body {
     margin: 0;
-    background-image: linear-gradient(135deg,whitesmoke, #e3e4e5, #b9babb,#919192, #474747, #262626 );
+    background-image: linear-gradient(135deg, #474747, #262626, #0a0a0a);
 }
 
 .logo{
@@ -192,7 +192,13 @@ footer{
 h1{
     color: white;
 }
+<<<<<<< HEAD
 
+=======
+.container{
+    color:white;
+}
+>>>>>>> ead458c3fee01b32ad7d596365ea77b9239aff56
 
 
 
