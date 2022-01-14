@@ -7,32 +7,19 @@
                 <img class="logo" th:src="@{/assets/legacynames_transparente.png}" alt="logo">
             </div>
             <img class="Iconraton" th:src="@{/assets/2.png}" alt="icono raton inicio">
-            <a class="navbar-brand" href="http://localhost:8080/">INICIO</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <img class="listadoicono" th:src="@{/assets/1.png}" alt="icono listado ">
+            <a class="nav-link" href="/">INICIO</a>
 
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
+            <img class="Iconraton" th:src="@{/assets/1.png}" alt="icono listado ">
+            <a class="nav-link" href="/games">CATÁLOGO</a>
 
-                        <a class="nav-link active" aria-current="page" href="http://localhost:8080/games/">CATALOGO</a>
-                    </li>
-                    <img class="Iconnew" th:src="@{/assets/dragonlogo.png}" alt="icono new">
+            <img class="Iconraton" th:src="@{/assets/dragonlogo.png}" alt="icono new">
+            <a class="nav-link" href="/games/new">NEW</a>
 
-                    <li class="nav-item">
-
-                        <a class="nav-link" href="http://localhost:8080/games/new">NEW</a>
-                    </li>
-
-                </ul>
-                <form action="#">
-                    <input type="search" class="search-data" placeholder="Search" required>
-                    <button type="submit" class="fas fa-search"></button>
-                </form>
-
-            </div>
+            <form action="#">
+                <input type="search" class="search-data" placeholder="Search" required>
+                <button type="submit" class="fas fa-search"></button>
+            </form>
         </div>
+
     </nav>
 </header>

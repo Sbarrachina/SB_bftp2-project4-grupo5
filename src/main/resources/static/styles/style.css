@@ -11,17 +11,24 @@ body {
 
 .container-fluid{
     background: linear-gradient(135deg, #ff5733, #ffc300, #ff7700, #ff8400ff, #ff7700ff, #fdc203, #fea703, #f85825, #fe4003);
-    padding: 15px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     font-size: 30px;
    font-family: 'Luckiest Guy', cursive;
+}
+.navbar {
+    padding: 0;
+}
+.nav-link{
+    color: black;
+
 }
 /*SEARCH- BUSQUEDA*/
 
 nav form{
     display: flex;
     height: 40px;
-    padding: 0px;
+    padding: 0;
     background: white;
     min-width: 18%!important;
     border: 2px solid rgba(155,155,155,0.2);
