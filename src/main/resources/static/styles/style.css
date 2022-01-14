@@ -11,7 +11,7 @@ body {
 }
 
 .container-fluid{
-    background-color: #FFC300;
+    background: linear-gradient(135deg, #ff5733, #ffc300, #fea703, #e033ff, #DAF7A6);
     padding: 15px;
     margin: 0px;
     font-size: 30px;
