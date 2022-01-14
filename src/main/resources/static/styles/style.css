@@ -7,11 +7,10 @@ body {
 .logo{
     width: 50%;
     padding: 10px;
-    background-color: #e033ff;
 }
 
 .container-fluid{
-    background-color: #FFC300;
+    background: linear-gradient(135deg, #ff5733, #ffc300, #ff7700, #ff8400ff, #ff7700ff, #fdc203, #fea703, #f85825, #fe4003);
     padding: 15px;
     margin: 0px;
     font-size: 30px;
