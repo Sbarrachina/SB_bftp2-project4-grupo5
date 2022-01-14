@@ -4,9 +4,11 @@ body {
     background-image: linear-gradient(135deg, #E033FF, #474747, #E033FF, #0a0a0a);
 }
 
+/*BARRA DE NAVEGACION*/
+
 .logo{
-    width: 50%;
-    padding: 10px;
+    width: 60%;
+    padding: 0;
 }
 
 .container-fluid{
@@ -16,57 +18,29 @@ body {
     font-size: 30px;
    font-family: 'Luckiest Guy', cursive;
 }
+
 .navbar {
     padding: 0;
 }
 .nav-link{
     color: black;
-
+    margin: 0 auto;
+    padding:0 auto;
 }
-/*SEARCH- BUSQUEDA*/
-
-nav form{
-    display: flex;
-    height: 40px;
-    padding: 0;
-    background: white;
-    min-width: 18%!important;
-    border: 2px solid rgba(155,155,155,0.2);
-    border-radius: 2px;
+.Iconraton{
+    width: 5%;
+    padding-left;
 }
-nav form .search-data{
-    width: 100%;
-    height: 100%;
-    padding: 0 10px;
-    color: #e63600;
-    font-size: 17px;
-    font-weight: 500;
-    background: none;
+/*TEXTO FORMULARIOS*/
+h1{
+    color: white;
 }
-nav form button{
-    padding: 5 20px;
-    color: #fff;
-    font-size: 17px;
-    background: black;
-    border: none;
-    border-radius: 2px;
-    cursor: pointer;
-}
-nav form button:hover{
-    background: #e63600;
-}
-nav .menu-icon,
-nav .cancel-icon,
-nav .search-icon{
-    width: 40px;
-    text-align: center;
-    margin: 0 50px;
-    font-size: 18px;
-    color: #fff;
-    cursor: pointer;
-    display: none;
+.container{
+    color:white;
 }
 
+
+/*FOOTER*/
 footer{
     padding: 20px;
     margin: 20px;
@@ -107,18 +81,7 @@ footer{
     75% { margin-left: -300%;}
     100% { margin-left: -300%;}
 }
-/*Iconos barra de inicio */
 
-.Iconraton{
-    width: 5%;
-}
-.listadoicono{
-    width: 10%;
-}
-
-.Iconnew{
-    width: 15%;
-}
 
 /*modo tarjeta*/
 
@@ -167,42 +130,12 @@ footer{
     padding: 10px;
 }
 
-.game-filters {
-    list-style: none;
-    font-size: 20px;
-    margin: 5px;
-    padding: 5px;
-    float: left;
-}
-
-.game-filters li  img   {
-    margin: 0 10px;
-    padding:10px;
-
-}
-
-/*Iconos fitros*/
 
 
 
-.iconAll{
-    width: 10%;
 
-}
-.iconciudad{
-    width: 10%;
 
-}
-.iconnombre{
-    width: 5%;
 
-}
-h1{
-    color: white;
-}
-.container{
-    color:white;
-}
 
 
 
