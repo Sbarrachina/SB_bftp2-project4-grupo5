@@ -17,8 +17,6 @@
                 <img class="Iconraton" th:src="@{/assets/dragonlogo.png}" alt="icono new">
                 <li><a class="nav-link" href="/games/new">NEW</a></li>
 
-                <img class="Iconraton" th:src="@{/assets/icono_logarse.png}" alt="icono logarse">
-
                 <li><a  class="nav-link" href="/login" sec:authorize="isAnonymous()">Sign In</a></li>
                 <li><a  class="nav-link" href="/logout" sec:authorize="isAuthenticated()">Sign Out</a></li>
             </div>
