@@ -7,7 +7,7 @@ body {
 /*BARRA DE NAVEGACION*/
 
 .logo{
-    width: 25%;
+    width: 20%;
     padding: 0;
 }
 
@@ -15,8 +15,8 @@ body {
     background: linear-gradient(135deg, #ff5733, #ffc300, #ff7700, #ff8400ff, #ff7700ff, #fdc203, #fea703, #f85825, #fe4003);
     padding: 0;
     margin: 0;
-    font-size: 30px;
-   font-family: 'Luckiest Guy', cursive;
+    font-size: 18px;
+    font-family: 'Luckiest Guy', cursive;
 }
 
 .nav-items{
@@ -26,14 +26,12 @@ body {
 }
 nav .nav-items li{
     list-style: none;
-    padding: 0 10px;
+    padding: 0 4px;
 }
 
 nav .nav-items li a:hover{
     color: #E033FF;
 }
-
-
 
 .navbar {
     padding: 0;
@@ -41,14 +39,42 @@ nav .nav-items li a:hover{
 .nav-link{
     color: black;
     margin: 0 auto;
-    padding:0;
-    font-size: 20px;
-    text-shadow: 2px 2px 0 orangered
+    font-size: 17px;
+    text-shadow: 2px 2px 0 orangered;
 }
+
 .Iconraton{
     width: 4%;
 }
-/*TEXTO FORMULARIOS*/
+
+
+ul li {
+    list-style: none;
+
+}
+.logarse{
+    width: 65px;
+    height: 56px
+    float: left;
+    overflow: hidden;
+
+    display: block;
+}
+
+
+.video_texto{
+    font-family: 'Luckiest Guy', cursive;
+    text-align:center;
+    color: #0a0a0a;
+    font-size:25px;
+}
+
+.Container_video {
+    display: flex;
+    justify-content: center;
+}
+
+/*TEXTO FORMULARIOS create new game*/
 h1{
     color: white;
 }
@@ -65,7 +91,7 @@ footer{
 /*Slider */
 
 .slider{
-    width: 95%;
+    width: 100%;
     margin: 0;
     overflow: hidden;
 }
@@ -90,7 +116,7 @@ footer{
     20% { margin-left: 0;}
 
     25% { margin-left: -100%;}
-    45% { margin-left: -100;}
+    45% { margin-left: -100%;}
 
     50% { margin-left: -200%;}
     70% { margin-left: -200%;}
@@ -109,8 +135,11 @@ footer{
 }
 
 .game {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
     width: 400px;
-    margin: 10px;
     border: 1px solid black;
     padding: 10px;
     transition-duration: 0.2s;
@@ -126,6 +155,7 @@ footer{
     width: 300px;
     height: 250px;
     margin: auto;
+    object-fit: cover;
 
 }
 
@@ -138,23 +168,28 @@ footer{
 
 .game .info {
     margin: 10px 20px;
-    font-size: 16px;
+    font-size: 18px;
+    text-align: center;
+
 
 }
 
 .game .buttons {
     margin-top: 50px;
     padding: 10px;
+    font-size: 10px;
 }
+
+
+
+
 
 
 h1{
     color: white;
 }
 
-.container{
-    color:white;
-}
+
 
 
 
